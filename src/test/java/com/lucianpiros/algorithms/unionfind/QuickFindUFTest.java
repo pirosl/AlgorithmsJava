@@ -46,7 +46,9 @@ public class QuickFindUFTest {
 		for(int i = 0; i < noTests; i++) {
 			int p = random.nextInt(size);
 			int q = random.nextInt(size);
-			assertFalse(qf.connected(p,q));
+			if(p != q) {
+				assertFalse(qf.connected(p,q));
+			}
 		}
 	}
 
