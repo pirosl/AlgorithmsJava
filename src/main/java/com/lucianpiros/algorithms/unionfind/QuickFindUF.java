@@ -1,3 +1,5 @@
+package com.lucianpiros.algorithms.unionfind;
+
 public class QuickFindUF {
 	int[] id;
 
