@@ -19,8 +19,8 @@ public class QuickFindUFCrossTest {
 
 	@Test
 	public void connectSameResult() {
-		QuickFindUF qf = new QuickFindUF(size);
-		QuickFindUFLambda qfl = new QuickFindUFLambda(size);
+		UnionFind qf = new QuickFindUF(size);
+		UnionFind qfl = new QuickFindUFLambda(size);
 		int nu = 1 + random.nextInt(2*size);
 		for(int i = 0; i < nu; i++ ) {
 			int p = random.nextInt(size);

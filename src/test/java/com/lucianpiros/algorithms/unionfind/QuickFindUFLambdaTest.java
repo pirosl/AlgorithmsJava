@@ -19,7 +19,7 @@ public class QuickFindUFLambdaTest {
 
 	@Test
 	public void reflexiveProperty() {
-		QuickFindUFLambda qf = new QuickFindUFLambda(size);
+		UnionFind qf = new QuickFindUFLambda(size);
 		for(int i = 0; i < size; i++) {	
 			assertTrue(qf.connected(i,i));
 		}
@@ -27,7 +27,7 @@ public class QuickFindUFLambdaTest {
 
 	@Test
 	public void longChain() {
-		QuickFindUFLambda qf = new QuickFindUFLambda(size);
+		UnionFind qf = new QuickFindUFLambda(size);
 		for(int i = 0; i < size-1; i++) {
 			qf.union(i, i+1);
 		}
@@ -42,7 +42,7 @@ public class QuickFindUFLambdaTest {
 
 	@Test
 	public void noConnectedComponents() {
-		QuickFindUFLambda qf = new QuickFindUFLambda(size);
+		UnionFind qf = new QuickFindUFLambda(size);
 
 		int noTests = 1 + random.nextInt(size);
 		for(int i = 0; i < noTests; i++) {
@@ -56,7 +56,7 @@ public class QuickFindUFLambdaTest {
 
 	@Test
 	public void connect2by2() {
-		QuickFindUFLambda qf = new QuickFindUFLambda(size);
+		UnionFind qf = new QuickFindUFLambda(size);
 		for(int i = 0; i < size-1; i += 2) {
 			qf.union(i, i+1);	
 		}
