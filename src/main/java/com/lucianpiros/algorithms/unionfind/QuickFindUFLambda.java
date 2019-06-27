@@ -4,8 +4,7 @@ import java.util.List;
 import java.util.ArrayList;  
 import java.util.stream.IntStream;
 
-
-public class QuickFindUFLambda {
+public class QuickFindUFLambda implements UnionFind {
 	class ConnectedGroup {
 		public int cg;
 

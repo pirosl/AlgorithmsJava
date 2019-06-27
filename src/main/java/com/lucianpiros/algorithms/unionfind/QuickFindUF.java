@@ -1,6 +1,6 @@
 package com.lucianpiros.algorithms.unionfind;
 
-public class QuickFindUF {
+public class QuickFindUF implements UnionFind {
 	int[] id;
 
 	public QuickFindUF(int N) {
