@@ -16,7 +16,8 @@ import org.junit.runners.Parameterized;
 public class QuickFindUFParametrisedTest {
 	enum UnionFindImp {
 		QUICKFIND,
-		QUICKFINDLAMBDA
+		QUICKFINDLAMBDA,
+		QUICKUNION
 	}
 
 	private Random random;
@@ -37,7 +38,8 @@ public class QuickFindUFParametrisedTest {
 	public static Collection input() {
 		return Arrays.asList(new Object[][] {
 			{UnionFindImp.QUICKFIND}, 
-		  	{UnionFindImp.QUICKFINDLAMBDA}
+		  	{UnionFindImp.QUICKFINDLAMBDA},
+			{UnionFindImp.QUICKUNION}
 			});
 	}
 
@@ -49,6 +51,9 @@ public class QuickFindUFParametrisedTest {
 		}
 		if(type == UnionFindImp.QUICKFINDLAMBDA) {
 			uf = new QuickFindUFLambda(size);
+		}
+		if(type == UnionFindImp.QUICKUNION) {
+			uf = new QuickUnionUF(size);
 		}
 
 		return uf;
